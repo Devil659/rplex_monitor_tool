@@ -1,0 +1,18 @@
+# RPLEX Monitor - Installation
+
+1. Clone the repo:
+   bash
+   git clone https://github.com/yourusername/rplex_monitoring-tool-beta-.git
+   cd rplex_monitoring-tool-beta-
+   
+
+2. Run the setup script:
+   bash
+   bash install.sh
+   
+
+3. Launch:
+   bash
+   ./rplex    # For basic version
+   ./rplex3   # For advanced version
+   
