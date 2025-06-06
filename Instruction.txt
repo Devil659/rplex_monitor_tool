@@ -1,18 +1,66 @@
-# RPLEX Monitor - Installation
+RPLEX SYSTEM MONITOR TOOL - COMPLETE GUIDE
+=========================================
 
-1. Clone the repo:
-   bash
-   git clone https://github.com/yourusername/rplex_monitoring-tool-beta-.git
-   cd rplex_monitoring-tool-beta-
-   
+1. INSTALLATION
+---------------
 
-2. Run the setup script:
-   bash
-   bash install.sh
-   
+A. AUTOMATIC INSTALL (Recommended):
+   ---------------------------------
+   cd rplex
+   chmod +x install.sh
+   ./install.sh
 
-3. Launch:
-   bash
-   ./rplex    # For basic version
-   ./rplex3   # For advanced version
-   
+B. MANUAL INSTALL:
+   ----------------
+   sudo apt update
+   sudo apt install -y g++ libncurses5-dev libncursesw5-dev
+   g++ rplex_monitor.cpp -o rplex.out -std=c++11
+   g++ rplex_monitor3.cpp -o rplex3.out -std=c++11 -lncurses
+   chmod +x rplex rplex3 rplex.out rplex3.out
+
+2. RUNNING THE TOOL
+-------------------
+
+A. BASIC VERSION:
+   ./rplex
+   or
+   ./rplex.out
+
+B. ADVANCED VERSION (with real-time graphs):
+   ./rplex3
+   or
+   ./rplex3.out
+
+3. KEYBOARD CONTROLS
+--------------------
+1 - Refresh Data
+2 - Process Manager
+3 - System Details
+4 - Help Menu
+5/q - Exit Program
+
+4. TROUBLESHOOTING
+------------------
+
+A. "Permission denied" errors:
+   chmod +x rplex rplex3 rplex.out rplex3.out
+
+B. Missing dependencies:
+   sudo apt install g++ libncurses5-dev libncursesw5-dev
+
+C. Compilation errors:
+   Check you have all dependencies installed
+   Verify file paths are correct
+
+5. UNINSTALL
+------------
+Simply delete the repository folder
+
+6. SUPPORT
+----------
+For additional help, open an issue on GitHub:
+https://github.com/Devil659/rplex_monitoring-tool-beta-
+
+=========================================
+RPLEX Monitor v3.0 - Developed by Devil659
+=========================================
