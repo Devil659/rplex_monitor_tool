@@ -1,0 +1,19 @@
+# RPLEX System Monitor - Requirements
+
+## Minimum System Configuration
+- *Processor*: 64-bit x86 architecture (Intel/AMD)
+- *Memory*: 2GB RAM (4GB recommended)
+- *Storage*: 100MB available space
+- *OS*: Linux (Tested on Kali Linux 2023.x, Ubuntu 20.04+)
+
+## Required Dependencies
+- g++ (GNU C++ Compiler)
+- libcurl4-openssl-dev
+- libncurses-dev
+- build-essential
+
+## Installation
+1. Install dependencies:
+   ```bash
+   sudo apt update
+   sudo apt install g++ libcurl4-openssl-dev libncurses-dev build-essential
