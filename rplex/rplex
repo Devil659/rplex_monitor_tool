@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# RPLEX System Monitor Launcher
+echo -e "\e[1;32m[+] Launching RPLEX System Monitor Tool...\e[0m"
+
+# Binary name
+BINARY="./rplex.out"
+
+# Compile only if binary doesn't exist
+if [ ! -f "$BINARY" ]; then
+    echo "[*] Compiling rplex_monitor.cpp..."
+    g++ rplex_monitor.cpp -o rplex.out -lncurses -lcurl -std=c++11
+
+    if [ $? -ne 0 ]; then
+        echo -e "\e[1;31m[-] Compilation failed. Make sure g++, ncurses, and curl are installed.\e[0m"
+        exit 1
+    fi
+fi
+
+# Run the compiled tool
+"$BINARY"

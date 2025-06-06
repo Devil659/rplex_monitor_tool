@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# RPLEX3 System Monitor Launcher
+echo -e "\e[1;36m[+] Launching RPLEX Monitor 3...\e[0m"
+
+# Name of compiled binary
+BINARY="./rplex3.out"
+
+# Compile only if not already compiled
+if [ ! -f "$BINARY" ]; then
+    echo "[*] Compiling rplex_monitor3.cpp..."
+    g++ rplex_monitor3.cpp -o rplex3.out -lncurses -lcurl -std=c++11
+
+    if [ $? -ne 0 ]; then
+        echo -e "\e[1;31m[-] Compilation failed. Check for missing g++, ncurses, or curl libs.\e[0m"
+        exit 1
+    fi
+fi
+
+# Run the binary
+"$BINARY"
